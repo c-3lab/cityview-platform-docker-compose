@@ -2,6 +2,9 @@
 
 本プロジェクトは地域の獣害に関する目撃情報を地図上に可視化するプラットフォームです。
 
+<img width="1000" alt="スクリーンショット 2021-05-20 18 57 23" src="https://user-images.githubusercontent.com/6661165/118959449-4b581580-b99d-11eb-9809-a8bc9366db39.png">
+
+
 ## 構成
 
 本プラットフォームの構築にはFIWARE(IoTプラットフォーム)を活用しております。
@@ -16,8 +19,11 @@
 
 # 起動方法
 
+リポジトリのクローン
+
 ```
-git clone https://github.com/c-3lab/
+git clone https://github.com/c-3lab/cityview-platform-docker-compose
+cd cityview-platform-docker-compose
 ```
 
 ## FIWARE OrionとFIWARE Cygnusの起動
