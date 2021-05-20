@@ -32,6 +32,7 @@ cd cityview-platform-docker-compose
 
 ## FIWARE OrionとFIWARE Cygnusの起動
 
+OrionとCygnusを起動します
 
 ```
 docker-compose up -d
@@ -40,12 +41,13 @@ docker-compose up -d
 
 ## WireCloudの起動
 
+WireCloudを起動します
 
 ```
 docker-compose -f docker-compose-wirecloud.yaml up -d
 ```
 
-WireCloud用のスーパーユーザーを作成します
+WireCloud用のスーパーユーザを作成します
 
 ```
 docker-compose exec wirecloud python manage.py createsuperuser
@@ -54,6 +56,7 @@ docker-compose exec wirecloud python manage.py createsuperuser
 
 ## Knowageの起動
 
+Knowageを起動します
 
 ```
 docker-compose -f docker-compose-knowage.yaml up -d
@@ -62,16 +65,20 @@ docker-compose -f docker-compose-knowage.yaml up -d
 
 ## Meteoroidの起動
 
-Meteoroidの起動に必要となるOpenWhiskを実行します
+Meteoroidの起動に必要となるOpenWhiskを取得します
 
 ```
 git clone https://github.com/apache/openwhisk-devtools.git
 ```
 
+OpenWhiskを実行します
+
 ```
 cd openwhisk-devtools/docker-compose/
 make quick-start
 ```
+
+Meteoroidを起動します
 
 ```
 docker-compose -f docker-compose-meteoroid.yaml up -d
@@ -85,10 +92,13 @@ Meteoroidのcliツールをインストールします(Python3.8以上が必要�
 pip install meteoroid-cli
 ```
 
+MeteoroidのFunctionを作成します
+
 ```
 meteoroid function create import-csv meteoroid-function/main.py
 ```
 
+FunctionへアクセスできるようにMeteoroidのEndpointを作成します
 
 ```
 meteoroid endpoint create nuisance_wildlife /import-csv post <function_id>
@@ -96,6 +106,7 @@ meteoroid endpoint create nuisance_wildlife /import-csv post <function_id>
 
 ### Functionの実行
 
+獣害データを作成したFunctionへ投入することでFIWARE Orionにデータが登録されます
 
 ```
 curl -X POST https://localhost:9090/api/4be9b685-d926-499e-b6cd-52f16ff03089/nuisance_wildlife/import-csv -H 'Content-Type: text/csv' --data-binary @meteoroid-function/sample.csv
