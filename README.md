@@ -79,6 +79,12 @@ docker-compose -f docker-compose-meteoroid.yaml up -d
 
 ### Functionの作成
 
+Meteoroidのcliツールをインストールします(Python3.8以上が必要です)
+
+```
+pip install meteoroid-cli
+```
+
 ```
 meteoroid function create import-csv meteoroid-function/main.py
 ```
