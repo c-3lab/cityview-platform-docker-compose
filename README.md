@@ -112,6 +112,8 @@ meteoroid endpoint create nuisance_wildlife /import-csv post <function_id>
 curl -X POST https://localhost:9090/api/4be9b685-d926-499e-b6cd-52f16ff03089/nuisance_wildlife/import-csv -H 'Content-Type: text/csv' --data-binary @meteoroid-function/sample.csv
 ```
 
+## WireCloudの設定
+
 ---
 
 # ライセンス
