@@ -1,0 +1,52 @@
+version: '3'
+
+services:
+  meteoroid:
+    image: oolorg/meteoroid-core:1.0.1
+    depends_on:
+      - migration
+    ports:
+      - "3000:3000"
+    environment:
+      - OPEN_WHISK_HOST=apigateway
+      - OPEN_WHISK_APIGATEWAY_PORT=8080
+      - OPEN_WHISK_USER=23bc46b1-71f6-4ed5-8c54-816aa4f8c502
+      - OPEN_WHISK_PASSWORD=123zO3xZCLrMN6v2BKK1dXYFpXlPkccOFqm12CdAsMgRU4VrNZ9lyGVCGuMDGIwP
+      - FIWARE_ORION_HOST=orion:1026
+      - DB_HOST=mongo-db
+    command: python meteoroid/manage.py runserver 0.0.0.0:3000
+    networks:
+      - proxynet
+      - default
+
+  migration:
+    image: oolorg/meteoroid-core:1.0.1
+    command: python meteoroid/manage.py migrate
+    links:
+      - mongo-db
+    depends_on:
+      - mongo-db
+    environment:
+      - OPEN_WHISK_HOST=apigateway
+      - OPEN_WHISK_USER=23bc46b1-71f6-4ed5-8c54-816aa4f8c502
+      - OPEN_WHISK_PASSWORD=123zO3xZCLrMN6v2BKK1dXYFpXlPkccOFqm12CdAsMgRU4VrNZ9lyGVCGuMDGIwP
+      - FIWARE_ORION_HOST=orion:1026
+      - DB_HOST=mongo-db
+
+  mongo-db:
+    image: mongo:4.4
+    hostname: mongo-db
+    container_name: mongo-db
+    ports:
+      - "27017:27017"
+    command: --nojournal
+    volumes:
+      - mongo-db:/data
+
+volumes:
+  mongo-db: ~
+
+networks:
+  proxynet:
+    external:
+      name: openwhisk_default
