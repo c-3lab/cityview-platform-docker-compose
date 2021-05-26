@@ -42,7 +42,7 @@ docker-compose up -d
 ## WireCloudの起動
 
 WireCloudを起動します。  
-WireCloudで使うDBは、一つ前のdokcer-compose.yamlで立ち上げたPostgreSQLを流用します。
+※ WireCloudで使うDBは一つ前のdokcer-compose.yamlで立ち上げたPostgreSQLが流用されます。
 
 ```
 docker-compose -f docker-compose-wirecloud.yaml up -d
