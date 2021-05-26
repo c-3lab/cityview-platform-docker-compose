@@ -76,7 +76,7 @@ docker-compose -f docker-compose-knowage.yaml up -d
 
 ## Meteoroidの起動
 
-Meteoroidの起動に必要となるOpenWhiskを取得します
+Meteoroidの起動に必要となる[OpenWhisk](https://github.com/apache/openwhisk-devtools)を取得します
 
 ```
 git clone https://github.com/apache/openwhisk-devtools.git
