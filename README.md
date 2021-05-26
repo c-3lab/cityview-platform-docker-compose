@@ -3,7 +3,7 @@
 
 # 概要
 
-本プロジェクトは地域の獣害に関する目撃情報を地図上に可視化するプラットフォームです。
+地域の課題やイベントなどの情報を地図上に可視化を行うプラットフォームです。
 
 <img width="1000" alt="スクリーンショット 2021-05-20 18 57 23" src="https://user-images.githubusercontent.com/6661165/118959449-4b581580-b99d-11eb-9809-a8bc9366db39.png">
 
@@ -106,7 +106,8 @@ meteoroid endpoint create nuisance_wildlife /import-csv post <function_id>
 
 ### Functionの実行
 
-獣害データを作成したFunctionへ投入することでFIWARE Orionにデータが登録されます
+
+先ほど作成したFunctionへサンプルデータの獣害情報を投入することでFIWARE Orionにデータが登録されます
 
 ```
 curl -X POST https://localhost:9090/api/4be9b685-d926-499e-b6cd-52f16ff03089/nuisance_wildlife/import-csv -H 'Content-Type: text/csv' --data-binary @meteoroid-function/sample.csv
