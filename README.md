@@ -185,17 +185,29 @@ WidgetはWireCloudで画面を構成するコンポーネントとなってお�
 
 OpenLayers Mapの +ボタンを押すと下にオレンジのボックスが作成されます。そのボックスを右側の空白にドラッグ&ドロップします。
 
-<img width="353" alt="スクリーンショット 2021-05-26 23 45 15" src="https://user-images.githubusercontent.com/6661165/119680792-75697600-be7c-11eb-9413-02aff2ad2abe.png">
+<img width="300" alt="スクリーンショット 2021-05-26 23 45 15" src="https://user-images.githubusercontent.com/6661165/119680792-75697600-be7c-11eb-9413-02aff2ad2abe.png">
 
 青色のタブからオペレーター切り替えます。  
 NGSI SourceとNGSI to PoIも同じように +ボタンを押し、作成された緑色の箱を右側の空白にドラッグ&ドロップします。
 
-<img width="344" alt="スクリーンショット 2021-05-26 23 49 05" src="https://user-images.githubusercontent.com/6661165/119681374-f88acc00-be7c-11eb-8096-ed31d4c768df.png">
+<img width="300" alt="スクリーンショット 2021-05-26 23 49 05" src="https://user-images.githubusercontent.com/6661165/119681374-f88acc00-be7c-11eb-8096-ed31d4c768df.png">
 
 以下のようにWidgetの接続を行います。  
 接続の方法は出っ張っている青色のコネクタを接続先のコネクタへドラッグ&ドロップします。
 
 <img width="600" alt="スクリーンショット 2021-05-26 23 51 35" src="https://user-images.githubusercontent.com/6661165/119681772-51f2fb00-be7d-11eb-9614-b66292998c6c.png">
+
+NGSI Sourceのハンバーガーメニューを押し、設定ボタンを押します。
+
+<img width="600" alt="スクリーンショット 2021-05-27 0 43 44" src="https://user-images.githubusercontent.com/6661165/119690933-1825f280-be85-11eb-930f-07e07d3e3c82.png">
+
+オペレータの設定を以下のように入力し設定を押します。
+
+<img width="600" alt="スクリーンショット 2021-05-27 0 48 20" src="https://user-images.githubusercontent.com/6661165/119691101-3ee42900-be85-11eb-9b74-610682c322ed.png">
+
+画面上部の戻るボタンを押します。
+
+<img width="300" alt="スクリーンショット 2021-05-27 0 49 32" src="https://user-images.githubusercontent.com/6661165/119691328-73f07b80-be85-11eb-8f18-200d48aff0b2.png">
 
 
 
