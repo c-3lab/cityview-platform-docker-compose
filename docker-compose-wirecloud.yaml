@@ -2,18 +2,6 @@ version: "3"
 
 services:
 
-    nginx:
-        restart: always
-        image: nginx
-        ports:
-            - 8000:8000
-        volumes:
-            - ./nginx.conf:/etc/nginx/nginx.conf:ro
-            - ./wirecloud-static:/var/www/static:ro
-        depends_on:
-            - wirecloud
-
-
     elasticsearch:
         restart: always
         image: elasticsearch:2.4
@@ -31,12 +19,14 @@ services:
     wirecloud:
         restart: always
         image: fiware/wirecloud
+        ports:
+            - "8000:8000"
         depends_on:
             - elasticsearch
             - memcached
         environment:
-            - DEBUG=False
-            # - DEFAULT_THEME=wirecloud.defaulttheme
+            - DEBUG=True
+            - DEFAULT_THEME=wirecloud.defaulttheme
             - DB_HOST=postgres-db
             - DB_PASSWORD=password # Change this password!
             - FORWARDED_ALLOW_IPS=*
