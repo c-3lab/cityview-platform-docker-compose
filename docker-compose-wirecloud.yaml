@@ -9,12 +9,10 @@ services:
             - elasticsearch-data:/usr/share/elasticsearch/data
         command: elasticsearch -Des.index.max_result_window=50000
 
-
     memcached:
         restart: always
         image: memcached:1
         command: memcached -m 2048m
-
 
     wirecloud:
         restart: always
@@ -39,6 +37,18 @@ services:
         volumes:
             - ./wirecloud-data:/opt/wirecloud_instance/data
             - ./wirecloud-static:/var/www/static
+
+    ngsi-proxy:
+        image: fiware/ngsiproxy:1.2.0
+        hostname: ngsi-proxy
+        expose:
+            - "8100"
+        ports:
+            - "8100:8100"
+        environment:
+            - PORT=8100
+            - TRUST_PROXY_HEADERS=0
+
 volumes:
   wirecloud-static:
   wirecloud-data:
