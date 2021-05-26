@@ -23,7 +23,7 @@
 
 # 起動方法
 
-リポジトリのクローン
+リポジトリのクローンをします。
 
 ```
 git clone https://github.com/c-3lab/cityview-platform-docker-compose
@@ -32,7 +32,7 @@ cd cityview-platform-docker-compose
 
 ## FIWARE OrionとFIWARE Cygnusの起動
 
-OrionとCygnusを起動します
+OrionとCygnusを起動します。
 
 ```
 docker-compose up -d
@@ -41,13 +41,14 @@ docker-compose up -d
 
 ## WireCloudの起動
 
-WireCloudを起動します
+WireCloudを起動します。  
+WireCloudで使うDBは、一つ前のdokcer-compose.yamlで立ち上げたPostgreSQLを流用します。
 
 ```
 docker-compose -f docker-compose-wirecloud.yaml up -d
 ```
 
-WireCloud用のスーパーユーザを作成します
+WireCloud用のスーパーユーザを作成します。
 
 ```
 docker-compose exec wirecloud python manage.py createsuperuser
