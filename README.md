@@ -126,6 +126,14 @@ curl -X POST https://localhost:9090/api/4be9b685-d926-499e-b6cd-52f16ff03089/nui
 
 ## WireCloudの設定
 
+WireCloudを使って可視化用Web画面を構築していきます。  
+ログイン画面にアクセスします。
+
+[http://localhost:8000/login](http://localhost:8000/login)
+
+
+
+
 ---
 
 # ライセンス
