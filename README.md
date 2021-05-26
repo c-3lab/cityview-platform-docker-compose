@@ -169,6 +169,7 @@ WidgetはWireCloudで画面を構成するコンポーネントとなってお�
 
 <img width="600" alt="スクリーンショット 2021-05-26 22 44 15" src="https://user-images.githubusercontent.com/6661165/119679715-8bc30200-be7b-11eb-9577-9b5fc3f09ae9.png">
 
+### ワイヤリングで画面を作成
 
 ペンマークを押すとワイヤリングなど画面の編集ができるようになります。
 
