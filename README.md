@@ -51,7 +51,7 @@ docker-compose -f docker-compose-wirecloud.yaml up -d
 WireCloud用のスーパーユーザを作成します。
 
 ```
-docker-compose exec wirecloud python manage.py createsuperuser
+docker-compose -f docker-compose-wirecloud.yaml exec wirecloud python manage.py createsuperuser
 ```
 
 
