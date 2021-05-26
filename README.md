@@ -203,7 +203,7 @@ NGSI Sourceのハンバーガーメニューを押し、設定ボタンを押し
 
 オペレータの設定を以下のように入力し設定を押します。
 
-<img width="600" alt="スクリーンショット 2021-05-27 0 48 20" src="https://user-images.githubusercontent.com/6661165/119691101-3ee42900-be85-11eb-9b74-610682c322ed.png">
+<img width="600" alt="スクリーンショット 2021-05-27 0 51 46" src="https://user-images.githubusercontent.com/6661165/119691640-b9ad4400-be85-11eb-955a-0961f5d63e53.png">
 
 画面上部の戻るボタンを押します。
 
