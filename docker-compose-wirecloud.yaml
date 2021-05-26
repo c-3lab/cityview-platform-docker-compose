@@ -9,7 +9,7 @@ services:
             - 80:80
         volumes:
             - ./nginx.conf:/etc/nginx/nginx.conf:ro
-            - wirecloud-static:/var/www/static:ro
+            - ./wirecloud-static:/var/www/static:ro
         depends_on:
             - wirecloud
 
