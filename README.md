@@ -54,6 +54,16 @@ WireCloud用のスーパーユーザを作成します。
 docker-compose -f docker-compose-wirecloud.yaml exec wirecloud python manage.py createsuperuser
 ```
 
+スーパーユーザの情報を対話形式で入力します。
+
+```
+Username (leave blank to use 'root'): ユーザ名
+Email address: メールアドレス
+Password: パスワード
+Password (again): パスワード再入力
+Superuser created successfully.
+```
+
 
 ## Knowageの起動
 
