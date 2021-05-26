@@ -186,15 +186,15 @@ OpenLayers Mapの +ボタンを押すと下にオレンジのボックスが作�
 
 <img width="353" alt="スクリーンショット 2021-05-26 23 45 15" src="https://user-images.githubusercontent.com/6661165/119680792-75697600-be7c-11eb-9413-02aff2ad2abe.png">
 
-上のタブからオペレーターに切り替えます。  
+上の青色のタブからオペレーター切り替えます。  
 NGSI SourceとNGSI to PoIも同じように +ボタンを押し、作成された緑色の箱を右側の空白にドラッグ&ドロップします。
 
 <img width="344" alt="スクリーンショット 2021-05-26 23 49 05" src="https://user-images.githubusercontent.com/6661165/119681374-f88acc00-be7c-11eb-8096-ed31d4c768df.png">
 
-以下のように接続を行います。  
+以下のようにWidgetの接続を行います。  
 接続の方法は出っ張っている青色のコネクタを接続先のコネクタへドラッグ&ドロップします。
 
-<img width="946" alt="スクリーンショット 2021-05-26 23 51 35" src="https://user-images.githubusercontent.com/6661165/119681772-51f2fb00-be7d-11eb-9614-b66292998c6c.png">
+<img width="600" alt="スクリーンショット 2021-05-26 23 51 35" src="https://user-images.githubusercontent.com/6661165/119681772-51f2fb00-be7d-11eb-9614-b66292998c6c.png">
 
 
 
