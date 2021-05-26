@@ -151,11 +151,14 @@ WireCloudを使って可視化用Web画面を構築していきます。
 
 必要なWidgetをダウンロードします。  
 WidgetはWireCloudで画面を構成するコンポーネントとなっており、ダウンロードしたWidgetをアップロードすることで使うことができます。  
-今回は以下のWidgetを使用します。  
+今回は以下のWidgetを使用します。 以下のダウンロードボタンを押して全てのWidgetをダウンロードします。 
 
-* [ol3-map-widget](https://github.com/Wirecloud/ol3-map-widget) [ダウンロード](https://github.com/Wirecloud/ol3-map-widget/releases/download/1.1.2/CoNWeT_ol3-map_1.1.2.wgt)
-* [ngsi-source](https://github.com/wirecloud-fiware/ngsi-source) [ダウンロード](https://github.com/wirecloud-fiware/ngsi-source/releases/download/4.0.0/CoNWeT_ngsi-source_4.0.0.wgt)
-* [ngsi-entity2poi-operator](https://github.com/wirecloud-fiware/ngsi-entity2poi-operator) [ダウンロード](https://github.com/wirecloud-fiware/ngsi-entity2poi-operator/releases/download/3.1.2/CoNWeT_ngsientity2poi_3.1.2.wgt)
+* [ol3-map-widget](https://github.com/Wirecloud/ol3-map-widget)
+  * [ダウンロード](https://github.com/Wirecloud/ol3-map-widget/releases/download/1.2.3/CoNWeT_ol3-map_1.2.3.wgt)
+* [ngsi-source](https://github.com/wirecloud-fiware/ngsi-source)
+  * [ダウンロード](https://github.com/wirecloud-fiware/ngsi-source-operator/releases/download/4.2.0/CoNWeT_ngsi-source_4.2.0.wgt)
+* [ngsi-entity2poi-operator](https://github.com/wirecloud-fiware/ngsi-entity2poi-operator)
+  * [ダウンロード](https://github.com/wirecloud-fiware/ngsi-entity2poi-operator/releases/download/v3.2.2/CoNWeT_ngsientity2poi_3.2.2.wgt)
 
 マイ・リソースを押します。
 
