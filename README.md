@@ -159,11 +159,42 @@ WidgetはWireCloudで画面を構成するコンポーネントとなってお�
 
 マイ・リソースを押します。
 
-<img width="322" alt="スクリーンショット 2021-05-26 22 16 16" src="https://user-images.githubusercontent.com/6661165/119666385-4b11bb80-be70-11eb-9858-442d7da89f67.png">
+<img width="300" alt="スクリーンショット 2021-05-26 22 16 16" src="https://user-images.githubusercontent.com/6661165/119666385-4b11bb80-be70-11eb-9858-442d7da89f67.png">
 
 次にアップロードを押します。
 
-<img width="302" alt="スクリーンショット 2021-05-26 22 19 18" src="https://user-images.githubusercontent.com/6661165/119666570-7399b580-be70-11eb-9543-009cc801d86e.png">
+<img width="300" alt="スクリーンショット 2021-05-26 22 19 18" src="https://user-images.githubusercontent.com/6661165/119666570-7399b580-be70-11eb-9543-009cc801d86e.png">
+
+画面にダウンロードしたWidgetをドラッグ&ドロップすることで追加することができます。ファイルの追加ができたらアップロードボタンを押します。
+
+<img width="600" alt="スクリーンショット 2021-05-26 22 44 15" src="https://user-images.githubusercontent.com/6661165/119679715-8bc30200-be7b-11eb-9577-9b5fc3f09ae9.png">
+
+
+ペンマークを押すとワイヤリングなど画面の編集ができるようになります。
+
+<img width="300" alt="スクリーンショット 2021-05-26 23 37 31" src="https://user-images.githubusercontent.com/6661165/119680223-f2e0b680-be7b-11eb-9d6c-34e57dfd77b7.png">
+
+ワイヤリングを選択します。
+
+<img width="300" alt="スクリーンショット 2021-05-26 23 37 37" src="https://user-images.githubusercontent.com/6661165/119680266-fbd18800-be7b-11eb-8518-0acf125a7575.png">
+
+コンポーネントの検索を押します。
+
+<img width="300" alt="スクリーンショット 2021-05-26 23 42 58" src="https://user-images.githubusercontent.com/6661165/119680458-2a4f6300-be7c-11eb-9154-a579a9e9bac0.png">
+
+OpenLayers Mapの +ボタンを押すと下にオレンジのボックスが作成されます。そのボックスを右側の空白にドラッグ&ドロップします。
+
+<img width="353" alt="スクリーンショット 2021-05-26 23 45 15" src="https://user-images.githubusercontent.com/6661165/119680792-75697600-be7c-11eb-9413-02aff2ad2abe.png">
+
+上のタブからオペレーターに切り替えます。  
+NGSI SourceとNGSI to PoIも同じように +ボタンを押し、作成された緑色の箱を右側の空白にドラッグ&ドロップします。
+
+<img width="344" alt="スクリーンショット 2021-05-26 23 49 05" src="https://user-images.githubusercontent.com/6661165/119681374-f88acc00-be7c-11eb-8096-ed31d4c768df.png">
+
+以下のように接続を行います。  
+接続の方法は出っ張っている青色のコネクタを接続先のコネクタへドラッグ&ドロップします。
+
+<img width="946" alt="スクリーンショット 2021-05-26 23 51 35" src="https://user-images.githubusercontent.com/6661165/119681772-51f2fb00-be7d-11eb-9614-b66292998c6c.png">
 
 
 
