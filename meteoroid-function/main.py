@@ -6,7 +6,7 @@ import requests
 import uuid
 
 # データ投入先（FIWARE-Orion）
-ORION_ENDPOINT: str = 'http://localhost:1026/v2'
+ORION_ENDPOINT: str = 'http://orion:1026/v2'
 
 
 def main(args):
