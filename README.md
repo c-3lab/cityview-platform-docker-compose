@@ -109,7 +109,7 @@ MeteoroidのFunctionを作成します。
 meteoroid function create import-csv meteoroid-function/main.py
 ```
 
-実行結果  
+**実行結果**  
 次の手順のEndpoint作成でこのidを使用します。   
 `meteoroid function list`コマンドでも確認できます。
 
@@ -141,14 +141,15 @@ meteoroid function create import-csv meteoroid-function/main.py
 
 ```
 
-FunctionへアクセスできるようにMeteoroidのEndpointを作成します
+FunctionへアクセスできるようにMeteoroidのEndpointを作成します。  
+先ほど作成したFunctionのidを最後に指定します。
 
 ```
 meteoroid endpoint create nuisance_wildlife /import-csv post <作成したFunction id>
 ```
 
-実行結果  
-作成されたurlを確認し、次の手順で実行します。
+**実行結果**  
+作成されたurlを確認します。
 
 ```
 +---------------------+------------------------------------------------------------------------------------------------+
@@ -169,7 +170,8 @@ meteoroid endpoint create nuisance_wildlife /import-csv post <作成したFuncti
 ### Functionの実行
 
 
-先ほど作成したFunctionへサンプルデータの獣害情報を投入することでFIWARE Orionにデータが登録されます
+先ほど作成したFunctionへサンプルデータの獣害情報を投入することでFIWARE Orionにデータが登録されます。  
+指定するURLは先ほどEndpointで作成したURLを指定します。
 
 ```
 curl -X POST <作成したEndpoint url> -H 'Content-Type: text/csv' --data-binary @meteoroid-function/sample.csv
