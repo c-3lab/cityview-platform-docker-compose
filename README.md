@@ -177,6 +177,30 @@ meteoroid endpoint create nuisance_wildlife /import-csv post <作成したFuncti
 curl -X POST <作成したEndpoint url> -H 'Content-Type: text/csv' --data-binary @meteoroid-function/sample.csv
 ```
 
+**実行結果**  
+以下の実行結果が出れば成功です。
+
+```
+HTTP/1.1 200 OK
+Server: openresty
+Date: Thu, 27 May 2021 00:59:58 GMT
+Content-Type: application/json
+Content-Length: 39
+Connection: keep-alive
+X-Request-ID: QXdvKLDgpaDausIXwAwYFbxjtvnIT8We
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Methods: GET, POST, PUT, DELETE, PATCH, HEAD, OPTIONS
+Access-Control-Allow-Headers: Authorization, Origin, X-Requested-With, Content-Type, Accept, User-Agent
+x-openwhisk-activation-id: 8679b54d205d4377b9b54d205d037745
+Access-Control-Allow-Credentials: true
+X-Request-Id: QXdvKLDgpaDausIXwAwYFbxjtvnIT8We
+
+{
+  "count": 1,
+  "status": "success"
+}%
+```
+
 ## WireCloudの設定
 
 WireCloudを使って可視化用Web画面を構築していきます。  
