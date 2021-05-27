@@ -97,23 +97,74 @@ docker-compose -f docker-compose-meteoroid.yaml up -d
 
 ### Functionの作成
 
-Meteoroidのcliツールをインストールします(Python3.8以上が必要です)
+Meteoroidのcliツールをインストールします。(Python3.8以上が必要です)
 
 ```
 pip install meteoroid-cli
 ```
 
-MeteoroidのFunctionを作成します
+MeteoroidのFunctionを作成します。
 
 ```
 meteoroid function create import-csv meteoroid-function/main.py
 ```
 
+実行結果  
+次の手順のEndpoint作成でこのidを使用します。   
+`meteoroid function list`コマンドでも確認できます。
+
+```
++---------------------+---------------------------------------------------------------------+
+| Field               | Value                                                               |
++---------------------+---------------------------------------------------------------------+
+| id                  | 1                                                                   |
+| code                | import csv                                                          |
+|                     | from datetime import datetime                                       |
+|                     | import dateutil.parser                                              |
+|                     | import io                                                           |
+|                     | import requests                                                     |
+|                     | import uuid                                                         |
+|                     |                                                                     |
+|                     | ~~省略~~                                                             |
+|                     | if __name__ == '__main__':                                          |
+|                     |     main({'__ow_body': 'bear,beast,0,1,1753-01-01T00:00:00+09:00'}) |
+|                     |                                                                     |
+| language            | python:default                                                      |
+| binary              | False                                                               |
+| main                |                                                                     |
+| version             | 0.0.1                                                               |
+| parameters          | []                                                                  |
+| fiware_service      |                                                                     |
+| fiware_service_path | /                                                                   |
+| name                | import-csv                                                          |
++---------------------+---------------------------------------------------------------------+
+
+```
+
 FunctionへアクセスできるようにMeteoroidのEndpointを作成します
 
 ```
-meteoroid endpoint create nuisance_wildlife /import-csv post <function_id>
+meteoroid endpoint create nuisance_wildlife /import-csv post <作成したFunction id>
 ```
+
+実行結果  
+作成されたurlを確認し、次の手順で実行します。
+
+```
++---------------------+------------------------------------------------------------------------------------------------+
+| Field               | Value                                                                                          |
++---------------------+------------------------------------------------------------------------------------------------+
+| id                  | 1                                                                                              |
+| url                 | http://192.168.11.4:9090/api/23bc46b1-71f6-4ed5-8c54-816aa4f8c502/nuisance_wildlife/import-csv |
+| fiware_service      |                                                                                                |
+| fiware_service_path | /                                                                                              |
+| name                | nuisance_wildlife                                                                              |
+| path                | /import-csv                                                                                    |
+| method              | post                                                                                           |
+| function            | 1                                                                                              |
++---------------------+------------------------------------------------------------------------------------------------+
+```
+
 
 ### Functionの実行
 
@@ -121,7 +172,7 @@ meteoroid endpoint create nuisance_wildlife /import-csv post <function_id>
 先ほど作成したFunctionへサンプルデータの獣害情報を投入することでFIWARE Orionにデータが登録されます
 
 ```
-curl -X POST https://localhost:9090/api/4be9b685-d926-499e-b6cd-52f16ff03089/nuisance_wildlife/import-csv -H 'Content-Type: text/csv' --data-binary @meteoroid-function/sample.csv
+curl -X POST <作成したEndpoint url> -H 'Content-Type: text/csv' --data-binary @meteoroid-function/sample.csv
 ```
 
 ## WireCloudの設定
