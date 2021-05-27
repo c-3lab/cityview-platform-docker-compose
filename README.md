@@ -67,7 +67,7 @@ Superuser created successfully.
 
 ## Knowageの起動
 
-Knowageを起動します
+Knowageを起動します。
 
 ```
 docker-compose -f docker-compose-knowage.yaml up -d
@@ -76,20 +76,20 @@ docker-compose -f docker-compose-knowage.yaml up -d
 
 ## Meteoroidの起動
 
-Meteoroidの起動に必要となる[OpenWhisk](https://github.com/apache/openwhisk-devtools)を取得します
+Meteoroidの起動に必要となる[OpenWhisk](https://github.com/apache/openwhisk-devtools)を取得します。
 
 ```
 git clone https://github.com/apache/openwhisk-devtools.git
 ```
 
-OpenWhiskを実行します
+OpenWhiskを実行します。
 
 ```
 cd openwhisk-devtools/docker-compose/
 make quick-start
 ```
 
-Meteoroidを起動します
+Meteoroidを起動します。
 
 ```
 docker-compose -f docker-compose-meteoroid.yaml up -d
@@ -211,7 +211,7 @@ WireCloudを使って可視化用Web画面を構築していきます。
 <img width="600" alt="スクリーンショット 2021-05-26 22 04 33" src="https://user-images.githubusercontent.com/6661165/119664640-80b5a500-be6e-11eb-96a3-08ed2fe56bb9.png">
 
 
-ハンバーガーメニューから「+ 新しいワークスペース」を選択します。
+ハンバーガーメニュー(横3本線のアイコン)から「+ 新しいワークスペース」を選択します。
 
 <img width="600" alt="スクリーンショット 2021-05-26 22 08 49" src="https://user-images.githubusercontent.com/6661165/119665142-0a657280-be6f-11eb-92b3-95419c3d2b32.png">
 
