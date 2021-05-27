@@ -224,7 +224,7 @@ WireCloudを使って可視化用Web画面を構築していきます。
 ### Widgetの追加
 
 次にWidgetを追加します。    
-WidgetはWireCloudで画面を構成するコンポーネントとなっており、ダウンロードしたWidgetをアップロードすることで使うことができます。  
+WidgetはWireCloudにおいて画面を構成するために必要なコンポーネントとなっており、外部からダウンロードしたWidgetをWireCloudへアップロードすることで使うことができます。  
 今回は以下のWidgetを使用します。 以下のダウンロードボタンを押して全てのWidgetをダウンロードします。 
 
 * [ol3-map-widget](https://github.com/Wirecloud/ol3-map-widget)
@@ -242,7 +242,7 @@ WidgetはWireCloudで画面を構成するコンポーネントとなってお�
 
 <img width="300" alt="スクリーンショット 2021-05-26 22 19 18" src="https://user-images.githubusercontent.com/6661165/119666570-7399b580-be70-11eb-9543-009cc801d86e.png">
 
-画面にダウンロードしたWidgetをドラッグ&ドロップすることで追加することができます。ファイルの追加ができたらアップロードボタンを押します。
+ダウンロードしたWidgetを画面にドラッグ&ドロップすることで追加することができます。ファイルの追加ができたらアップロードボタンを押します。
 
 <img width="600" alt="スクリーンショット 2021-05-26 22 44 15" src="https://user-images.githubusercontent.com/6661165/119679715-8bc30200-be7b-11eb-9577-9b5fc3f09ae9.png">
 
@@ -287,6 +287,9 @@ NGSI Sourceのハンバーガーメニューを押し、設定ボタンを押し
 
 <img width="300" alt="スクリーンショット 2021-05-27 0 49 32" src="https://user-images.githubusercontent.com/6661165/119691328-73f07b80-be85-11eb-8f18-200d48aff0b2.png">
 
+サンプルデータとして登録した情報が地図上にピンとして表示されています。ピンを押すと吹き出しが表示され詳細情報を見ることもできます。
+
+<img width="600" alt="スクリーンショット 2021-05-27 10 09 59" src="https://user-images.githubusercontent.com/6661165/119750283-eee08300-bed3-11eb-8d1c-b9e575cda428.png">
 
 
 ---
