@@ -1,53 +1,52 @@
 version: "3"
 
 services:
+  elasticsearch:
+    restart: always
+    image: elasticsearch:2.4
+    volumes:
+      - elasticsearch-data:/usr/share/elasticsearch/data
+    command: elasticsearch -Des.index.max_result_window=50000
 
-    elasticsearch:
-        restart: always
-        image: elasticsearch:2.4
-        volumes:
-            - elasticsearch-data:/usr/share/elasticsearch/data
-        command: elasticsearch -Des.index.max_result_window=50000
+  memcached:
+    restart: always
+    image: memcached:1
+    command: memcached -m 2048m
 
-    memcached:
-        restart: always
-        image: memcached:1
-        command: memcached -m 2048m
+  wirecloud:
+    restart: always
+    image: fiware/wirecloud
+    ports:
+      - "8000:8000"
+    depends_on:
+      - elasticsearch
+      - memcached
+    environment:
+      - DEBUG=True
+      - DEFAULT_THEME=wirecloud.defaulttheme
+      - DB_HOST=postgres-db
+      - DB_PASSWORD=password # Change this password!
+      - FORWARDED_ALLOW_IPS=*
+      - ELASTICSEARCH2_URL=http://elasticsearch:9200/
+      - MEMCACHED_LOCATION=memcached:11211
+      # Uncomment the following environment variables to enable IDM integration
+      #- FIWARE_IDM_SERVER=${FIWARE_IDM_SERVER}
+      #- SOCIAL_AUTH_FIWARE_KEY=${SOCIAL_AUTH_FIWARE_KEY}
+      #- SOCIAL_AUTH_FIWARE_SECRET=${SOCIAL_AUTH_FIWARE_SECRET}
+    volumes:
+      - ./wirecloud-data:/opt/wirecloud_instance/data
+      - ./wirecloud-static:/var/www/static
 
-    wirecloud:
-        restart: always
-        image: fiware/wirecloud
-        ports:
-            - "8000:8000"
-        depends_on:
-            - elasticsearch
-            - memcached
-        environment:
-            - DEBUG=True
-            - DEFAULT_THEME=wirecloud.defaulttheme
-            - DB_HOST=postgres-db
-            - DB_PASSWORD=password # Change this password!
-            - FORWARDED_ALLOW_IPS=*
-            - ELASTICSEARCH2_URL=http://elasticsearch:9200/
-            - MEMCACHED_LOCATION=memcached:11211
-            # Uncomment the following environment variables to enable IDM integration
-            #- FIWARE_IDM_SERVER=${FIWARE_IDM_SERVER}
-            #- SOCIAL_AUTH_FIWARE_KEY=${SOCIAL_AUTH_FIWARE_KEY}
-            #- SOCIAL_AUTH_FIWARE_SECRET=${SOCIAL_AUTH_FIWARE_SECRET}
-        volumes:
-            - ./wirecloud-data:/opt/wirecloud_instance/data
-            - ./wirecloud-static:/var/www/static
-
-    ngsi-proxy:
-        image: fiware/ngsiproxy:1.2.0
-        hostname: ngsi-proxy
-        expose:
-            - "8100"
-        ports:
-            - "8100:8100"
-        environment:
-            - PORT=8100
-            - TRUST_PROXY_HEADERS=0
+  ngsi-proxy:
+    image: fiware/ngsiproxy:1.2.0
+    hostname: ngsi-proxy
+    expose:
+      - "8100"
+    ports:
+      - "8100:8100"
+    environment:
+      - PORT=8100
+      - TRUST_PROXY_HEADERS=0
 
 volumes:
   wirecloud-static:

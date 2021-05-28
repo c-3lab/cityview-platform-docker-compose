@@ -1,7 +1,6 @@
-version: '3'
+version: "3"
 
 services:
-
   # Databases - Orion uses Mongo-DB, Cygnus is persisting to Postgres
   mongo-db:
     image: mongo:4.4
@@ -59,7 +58,6 @@ services:
       - "CYGNUS_LOG_LEVEL=DEBUG" # The logging level for Cygnus
       - "CYGNUS_SERVICE_PORT=5055" # Notification Port that Cygnus listens to for Postgres subscriptions
       - "CYGNUS_API_PORT=5080" # Port that Cygnus listens on for operational reasons
-
 
 volumes:
   mongo-db: ~
