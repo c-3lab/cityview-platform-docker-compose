@@ -23,6 +23,26 @@
 
 # 起動方法
 
+## OpenWhiskのインストール
+
+最初に[OpenWhisk](https://github.com/apache/openwhisk-devtools)を起動します。
+これは、あとでFIWARE OrionコンテナがOpenWhiskのネットワークopenwhisk_defaultを参照するためです。
+
+まず、OpenWhiskを取得します。
+
+```
+git clone https://github.com/apache/openwhisk-devtools.git
+```
+
+OpenWhiskを実行します。
+
+```
+cd openwhisk-devtools/docker-compose/
+make quick-start
+```
+
+## リポジトリの取得
+
 リポジトリのクローンをします。
 
 ```
@@ -75,19 +95,6 @@ docker-compose -f docker-compose-knowage.yaml up -d
 
 
 ## Meteoroidの起動
-
-Meteoroidの起動に必要となる[OpenWhisk](https://github.com/apache/openwhisk-devtools)を取得します。
-
-```
-git clone https://github.com/apache/openwhisk-devtools.git
-```
-
-OpenWhiskを実行します。
-
-```
-cd openwhisk-devtools/docker-compose/
-make quick-start
-```
 
 Meteoroidを起動します。
 
